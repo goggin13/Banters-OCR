@@ -52,29 +52,19 @@ results = []
 for line in lines:
   if not re.match(date_regex, line):
     results.append(line)
-
 result_string = "\n".join(results)
-print  "\n", "*" * 40, " formatted for 'posts/build' ", "*" * 40, "\n"
-print result_string
-print "\n", "=" * 91
 
 # Get result from 'posts/build'
-h = Http()
 data = dict(text=result_string)
 url = "https://staging.banters.com/posts/build.json"
-resp, content = h.request(url, "POST", urlencode(data))
+resp, content = Http().request(url, "POST", urlencode(data))
 json_object = json.loads(content)
 
-print  "\n", "*" * 40, " response from from 'posts/build' ", "*" * 40, "\n"
-print json_object
-print "\n", "=" * 91
-
 # And post the conversation
-h = Http()
 json_object['session_id'] = auth['session_id']
 data = json.dumps(json_object)
 url = "https://staging.banters.com/posts.json"
-resp, content = h.request(url, "POST", data, headers={'Content-Type': 'application/json'})
+resp, content = Http().request(url, "POST", data, headers={'Content-Type': 'application/json'})
 
 json_object = json.loads(content)
 print  "\n", "*" * 40, " response from from 'posts/create' ", "*" * 40, "\n"
