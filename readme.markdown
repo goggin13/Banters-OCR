@@ -15,6 +15,9 @@ then
 * `./setup.py install`  
   (if python2.6 is not your system default, you may need to either make it, with `defaults write com.apple.versioner.python Version 2.6`, or find a pay to tell setup.py to install version 2.6)
 * `./tests/run_data_tests.py`  
+* clean up
+  * `rm -r gdata-2.0.15`
+  * `rm -r gdata-2.0.15.tar.gz`  
 
 ## Create auth file
 Using your Google credentials, and a https://staging.banters.com session_id  
