@@ -3,7 +3,9 @@
 
 ## Dependencies
 * Python 2.6  
-* httplib2 - `easy_install-2.6 httplib2` (the '-2.6' is necessary if you have multiple python versions, e.g. OSX 10.7)  
+* httplib2  
+  * `easy_install httplib2` or
+  * `easy_install-2.6 httplib2` (the '-2.6' is necessary if you have multiple python versions, e.g. OSX 10.7)  
 
 ## Install gdata-python-client  
 * `wget http://gdata-python-client.googlecode.com/files/gdata-2.0.15.tar.gz`  
