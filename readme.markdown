@@ -9,6 +9,7 @@
 * `wget http://gdata-python-client.googlecode.com/files/gdata-2.0.15.tar.gz`  
 or  
 * `curl -O http://gdata-python-client.googlecode.com/files/gdata-2.0.15.tar.gz`  
+then  
 * `tar zxvf gdata-2.0.15.tar.gz`  
 * `cd gdata-2.0.15`  
 * `./setup.py install`  
