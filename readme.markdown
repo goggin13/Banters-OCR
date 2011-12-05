@@ -6,4 +6,7 @@
 * `./tests/run_data_tests.py`  
 
 ## Create auth file with your Google credentials  
-* `echo '{"username": "USERNAME", "password": "PASSWORD"}' > auth2.js`  
+* `echo '{"username": "USERNAME", "password": "PASSWORD", "session_id": "SESSION_ID"}' > auth2.js`  
+
+## Run it
+* `python banters_ocr.py`

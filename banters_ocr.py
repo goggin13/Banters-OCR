@@ -70,9 +70,8 @@ print json_object
 print "\n", "=" * 91
 
 # And post the conversation
-session_id = "GrLk7g6BBJVZBhehZupkLC67Mk5jUQrH"
 h = Http()
-json_object['session_id'] = session_id
+json_object['session_id'] = auth['session_id']
 data = json.dumps(json_object)
 url = "https://staging.banters.com/posts.json"
 resp, content = h.request(url, "POST", data, headers={'Content-Type': 'application/json'})
