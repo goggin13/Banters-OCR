@@ -21,7 +21,7 @@ then
 
 ## Create auth file
 Using your Google credentials, and a https://staging.banters.com session_id  
-* `echo '{"username": "USERNAME", "password": "PASSWORD", "session_id": "SESSION_ID"}' > auth2.js`  
+* `echo '{"username": "USERNAME", "password": "PASSWORD", "session_id": "SESSION_ID"}' > auth.js`  
 
 ## Run it
 * `python banters_ocr.py`
