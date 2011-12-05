@@ -67,6 +67,6 @@ url = "https://staging.banters.com/posts.json"
 resp, content = Http().request(url, "POST", data, headers={'Content-Type': 'application/json'})
 
 json_object = json.loads(content)
-print  "\n", "*" * 40, " response from from 'posts/create' ", "*" * 40, "\n"
+print  "\n", "*" * 35, " response from 'posts/create' ", "*" * 35, "\n"
 print "Created conversation %d" % json_object['id']
 print "\n", "=" * 91
