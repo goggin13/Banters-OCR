@@ -5,7 +5,8 @@
 * `./setup.py install`  
 * `./tests/run_data_tests.py`  
 
-## Create auth file with your Google credentials  
+## Create auth file
+Using your Google credentials, and a https://staging.banters.com session_id
 * `echo '{"username": "USERNAME", "password": "PASSWORD", "session_id": "SESSION_ID"}' > auth2.js`  
 
 ## Run it
