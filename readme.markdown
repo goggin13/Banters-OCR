@@ -1,3 +1,6 @@
+## Get the code
+* `git clone git@github.com:goggin13/Banters-OCR.git`
+
 ## Install gdata-python-client  
 * `wget http://gdata-python-client.googlecode.com/files/gdata-2.0.15.tar.gz`  
 * `tar zxvf gdata-2.0.15.tar.gz`  
@@ -6,7 +9,7 @@
 * `./tests/run_data_tests.py`  
 
 ## Create auth file
-Using your Google credentials, and a https://staging.banters.com session_id
+Using your Google credentials, and a https://staging.banters.com session_id  
 * `echo '{"username": "USERNAME", "password": "PASSWORD", "session_id": "SESSION_ID"}' > auth2.js`  
 
 ## Run it
