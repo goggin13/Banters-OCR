@@ -21,11 +21,13 @@ img = gdata.data.MediaSource(file_path=img_path, content_type='image/png')
 temp_file_name = "photo-%d" % int(round(random.random() * 100000, 0))                             
 folder = "https://docs.google.com/feeds/default/private/full?v=3&ocr=true"
 entry = client.Upload(img, temp_file_name, folder_or_uri=folder)
-root = "https://docs.google.com/feeds/id/"
-document_path = entry.id.text[len(root):]
+print "entry is online at %s" % entry.GetAlternateLink().text
+google_doc_root = "https://docs.google.com/feeds/id/"
+document_path = entry.id.text[len(google_doc_root):]
+print "document_path is %s" % document_path 
 
 # Download as text
-file_path = '/Users/mattgoggin/Desktop/your_document.txt'
+file_path = os.path.join(root, 'tmp.txt')
 client.Export(document_path, file_path)
 f = open(file_path, 'r')
 raw_text = f.read()
