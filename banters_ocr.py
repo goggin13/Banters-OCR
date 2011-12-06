@@ -16,15 +16,14 @@ client = gdata.docs.service.DocsService()
 client.ClientLogin(auth['username'], auth['password'])
 
 # Upload image file
-img_path = os.path.join(root, 'photo.PNG')
-img = gdata.data.MediaSource(file_path=img_path, content_type='image/png')                             
+file_name = 'bennet'
+img_path = os.path.join(root, 'tests', '%s.jpg' % file_name)
+img = gdata.data.MediaSource(file_path=img_path, content_type='image/jpeg')                             
 temp_file_name = "photo-%d" % int(round(random.random() * 100000, 0))                             
 folder = "https://docs.google.com/feeds/default/private/full?v=3&ocr=true"
 entry = client.Upload(img, temp_file_name, folder_or_uri=folder)
-print "entry is online at %s" % entry.GetAlternateLink().text
 google_doc_root = "https://docs.google.com/feeds/id/"
 document_path = entry.id.text[len(google_doc_root):]
-print "document_path is %s" % document_path 
 
 # Download as text
 file_path = os.path.join(root, 'tmp.txt')
